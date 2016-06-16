@@ -19,21 +19,21 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
     
 ## Documentation
 
-#### vnnews.vnexpress.get_soup(url)
+1. vnnews.vnexpress.get_soup(url)
 
-&nbsp;&nbsp;&nbsp;&nbsp; | Meta | Explanation |
-&nbsp;&nbsp;&nbsp;&nbsp; | :---- | :----------- |
-&nbsp;&nbsp;&nbsp;&nbsp; | *Usage* | Returns the DOM for a particular URL |
-&nbsp;&nbsp;&nbsp;&nbsp; | *Parameters* | **url**: URL of the page to get DOM |
-&nbsp;&nbsp;&nbsp;&nbsp; | *Returns* | DOM representation for the input URL |
+    | Meta | Explanation |
+    | :---- | :----------- |
+    | *Usage* | Returns the DOM for a particular URL |
+    | *Parameters* | **url**: URL of the page to get DOM |
+    | *Returns* | DOM representation for the input URL |
 
-#### vnnews.vnexpress.get_links_in_url(url)
+2. vnnews.vnexpress.get_links_in_url(url)
 
-| Meta | Explanation |
-| :---- | :----------- |
-| *Usage* | Returns a list containing all news titles and URLs for one page |
-| *Parameters* | **url**: URL of the page to get DOM |
-| *Returns* | a pandas DataFrame containing 2 columns: title & url |
+    | Meta | Explanation |
+    | :---- | :----------- |
+    | *Usage* | Returns a list containing all news titles and URLs for one page |
+    | *Parameters* | **url**: URL of the page to get DOM |
+    | *Returns* | a pandas DataFrame containing 2 columns: title & url |
 
 #### vnnews.vnexpress.get_article_content(url):
 
