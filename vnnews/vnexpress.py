@@ -107,4 +107,43 @@ def thoisu_csv(quantity=25):
 # Get news for The Thao category
 def thethao(quantity=25):
     page_urls = get_page_urls(const.VNEXPRESS_THETHAO, quantity)
-    return page_urls
+    all_urls = pd.DataFrame(columns=['title', 'url'])
+    for page in page_urls:
+        all_urls = all_urls.append(get_links_in_url(page), ignore_index=True)
+
+    all_urls = all_urls[:quantity]
+    content = []
+    for url in all_urls.url:
+        print 'Crawling URL ---- {}'.format(url)
+        content.append(get_article_content(url))
+
+    all_urls['content'] = content
+    all_urls['category'] = 'thethao'
+    return all_urls
+
+
+def thethao_csv(quantity=25):
+    data = thethao(quantity)
+    data.to_csv('./thethao_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
+
+
+def giaitri(quantity=25):
+    page_urls = get_page_urls(const.VNEXPRESS_GIAITRI, quantity)
+    all_urls = pd.DataFrame(columns=['title', 'url'])
+    for page in page_urls:
+        all_urls = all_urls.append(get_links_in_url(page), ignore_index=True)
+
+    all_urls = all_urls[:quantity]
+    content = []
+    for url in all_urls.url:
+        print 'Crawling URL ---- {}'.format(url)
+        content.append(get_article_content(url))
+
+    all_urls['content'] = content
+    all_urls['category'] = 'giaitri'
+    return all_urls
+
+
+def giaitri_csv(quantity=25):
+    data = giaitri(quantity)
+    data.to_csv('./giaitri_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')

@@ -1,5 +1,6 @@
 VNEXPRESS_THETHAO = 'http://thethao.vnexpress.net/'
 VNEXPRESS_THOISU = 'http://vnexpress.net/tin-tuc/thoi-su/'
+VNEXPRESS_GIAITRI = 'http://giaitri.vnexpress.net/'
 VNEXPRESS_24H = 'http://vnexpress.net/24h-qua'
 
 VNEXPRESS_24H_THOISU_INDEX = 0
