@@ -19,7 +19,10 @@ def get_soup(url):
 def get_links_in_url(url):
     soup = get_soup(url)
     block_mid_new = soup.find('div', {'class': 'block_mid_new'})
-    news_list = block_mid_new.find_all('div', {'class': 'title_news'})
+    if block_mid_new.find_all('div', {'class': 'title_news'}):
+        news_list = block_mid_new.find_all('div', {'class': 'title_news'})
+    else:
+        news_list = block_mid_new.find_all('h2', {'class': 'title_news'})
     links_in_url = []
     for news in news_list:
         links_in_url.append([news.find('a').contents[0], news.find('a')['href']])
