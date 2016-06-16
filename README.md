@@ -19,21 +19,21 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
     
 ## Documentation
 
-1. vnnews.vnexpress.get_soup(url)
+#### vnnews.vnexpress.get_soup(url)
 
-    | Meta | Explanation |
-    | :---- | :----------- |
-    | *Usage* | Returns the DOM for a particular URL |
-    | *Parameters* | **url**: URL of the page to get DOM |
-    | *Returns* | DOM representation for the input URL |
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Returns the DOM for a particular URL |
+| *Parameters* | **url**: URL of the page to get DOM |
+| *Returns* | DOM representation for the input URL |
 
-2. vnnews.vnexpress.get_links_in_url(url)
+#### vnnews.vnexpress.get_links_in_url(url)
 
-    | Meta | Explanation |
-    | :---- | :----------- |
-    | *Usage* | Returns a list containing all news titles and URLs for one page |
-    | *Parameters* | **url**: URL of the page to get DOM |
-    | *Returns* | a pandas DataFrame containing 2 columns: title & url |
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Returns a list containing all news titles and URLs for one page |
+| *Parameters* | **url**: URL of the page to get DOM |
+| *Returns* | a pandas DataFrame containing 2 columns: title & url |
 
 #### vnnews.vnexpress.get_article_content(url):
 
