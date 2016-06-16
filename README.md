@@ -19,7 +19,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
     
 ## Documentation
 
-#### vnnews.vnexpress.get_soup(url)
+#### - vnnews.vnexpress.get_soup(url)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -27,7 +27,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **url**: URL of the page to get DOM |
 | *Returns* | DOM representation for the input URL |
 
-#### vnnews.vnexpress.get_links_in_url(url)
+#### - vnnews.vnexpress.get_links_in_url(url)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -35,7 +35,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **url**: URL of the page to get DOM |
 | *Returns* | A pandas DataFrame containing 2 columns: title & url |
 
-#### vnnews.vnexpress.get_article_content(url):
+#### - vnnews.vnexpress.get_article_content(url):
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -43,7 +43,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **url**: URL of the page to get DOM |
 | *Returns* | Article content |
 
-#### get_page_urls(base_url, quantity=25)
+#### - vnnews.vnexpress.get_page_urls(base_url, quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -51,7 +51,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **url**: URL of the page to get DOM <br> **quantity**: number of articles to get, default is 25|
 | *Returns* | list of URLs based on `quantity` |
 
-#### get_category_news(base_url, quantity, category)
+#### - vnnews.vnexpress.get_category_news(base_url, quantity, category)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -59,7 +59,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **base_url**: base URL for the category <br> **quantity**: number of articles user wants to get <br> **category**: category number, defined in const.py |
 | *Returns* | a pandas DataFrame containing news: its title, URL, content and its category number |
 
-#### thoisu(quantity=25)
+#### - vnnews.vnexpress.thoisu(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -67,7 +67,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Thời Sự to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### thoisu_csv(quantity=25)
+#### - vnnews.vnexpress.thoisu_csv(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -75,7 +75,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Thời Sự to get |
 | *Returns* | None |
 
-#### thethao(quantity=25)
+#### - vnnews.vnexpress.thethao(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -83,7 +83,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Thể Thao to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### thethao_csv(quantity=25)
+#### - vnnews.vnexpress.thethao_csv(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -91,7 +91,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Thể Thao to get |
 | *Returns* | None |
 
-#### giaitri(quantity=25)
+#### - vnnews.vnexpress.giaitri(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -99,7 +99,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Giải Trí to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### giaitri_csv(quantity=25)
+#### - vnnews.vnexpress.giaitri_csv(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -107,7 +107,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Giải Trí to get |
 | *Returns* | None |
 
-#### khoahoc(quantity=25)
+#### - vnnews.vnexpress.khoahoc(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
@@ -115,7 +115,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Khoa Học to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### khoahoc_csv(quantity=25)
+#### - vnnews.vnexpress.khoahoc_csv(quantity=25)
 
 | Meta | Explanation |
 | :---- | :----------- |
