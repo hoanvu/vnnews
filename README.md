@@ -47,32 +47,78 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 
 | Meta | Explanation |
 | :---- | :----------- |
-| *Usage* | VNExpress display 25 news article per page. This method returns number of pages and their URL based on the quantity of articles that user wants <br> For example: <br> - if user wants 30 articles, first 2 page URLs will be returned <br> - if user wants 52 articles, first 3 page URLs will be returned |
+| *Usage* | VNExpress display 25 news article per page. This method returns number of pages and their URL based on the quantity of articles that user wants. For example: <br> - if user wants 30 articles, first 2 page URLs will be returned <br> - if user wants 52 articles, first 3 page URLs will be returned |
 | *Parameters* | **url**: URL of the page to get DOM <br> **quantity**: number of articles to get, default is 25|
 | *Returns* | list of URLs based on `quantity` |
 
 #### get_category_news(base_url, quantity, category)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Returns news for a category. Each category only need to call this method in order to get the news |
+| *Parameters* | **base_url**: base URL for the category <br> **quantity**: number of articles user wants to get <br> **category**: category number, defined in const.py |
+| *Returns* | a pandas DataFrame containing news: its title, URL, content and its category number |
 
 #### thoisu(quantity=25)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Thời Sự |
+| *Parameters* | **quantity**: number of news article for Thời Sự to return |
+| *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### thoisu_csv(quantity=25)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Thời Sự and save to CSV file |
+| *Parameters* | **quantity**: number of news article for Thời Sự to return |
+| *Returns* | None |
 
 #### thethao(quantity=25)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Thể Thao |
+| *Parameters* | **quantity**: number of news article for Thể Thao to return |
+| *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### thethao_csv(quantity=25)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Thể Thao and save to CSV file |
+| *Parameters* | **quantity**: number of news article for Thể Thao to return |
+| *Returns* | None |
 
 #### giaitri(quantity=25)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Giải Trí |
+| *Parameters* | **quantity**: number of news article for Giải Trí to return |
+| *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### giaitri_csv(quantity=25)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Giải Trí and save to CSV file |
+| *Parameters* | **quantity**: number of news article for Giải Trí to return |
+| *Returns* | None |
 
 #### khoahoc(quantity=25)
 
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Khoa Học |
+| *Parameters* | **quantity**: number of news article for Khoa Học to return |
+| *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### khoahoc_csv(quantity=25)
+
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Khoa Học and save to CSV file |
+| *Parameters* | **quantity**: number of news article for Khoa Học to return |
+| *Returns* | None |
