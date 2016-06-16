@@ -22,23 +22,23 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 ##### vnnews.vnexpress.get_soup(url)
 
 | Meta | Explanation |
-| ---- | ----------- |
+| :---- | :----------- |
 | *Usage* | Returns the DOM for a particular URL |
 | *Parameters* | **url**: URL of the page to get DOM |
 | *Returns* | DOM representation for the input URL |
 
 ##### vnnews.vnexpress.get_links_in_url(url)
 
-Returns a list containing all news titles and URLs for one page
-
-- *Parameters*: 
-    - **url**: URL of the page to get data
-- *Returns*: a pandas DataFrame containing 2 columns: title & url
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Returns a list containing all news titles and URLs for one page |
+| *Parameters* | **url**: URL of the page to get DOM |
+| *Returns* | a pandas DataFrame containing 2 columns: title & url |
 
 ##### vnnews.vnexpress.get_article_content(url):
 
-Visits each news URL and return its text content
-
-- *Parameters*: 
-    - **url**: URL of the article to get content
-- *Returns*: article content
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Visits a news URL and return its text content |
+| *Parameters* | **url**: URL of the page to get DOM |
+| *Returns* | article content |
