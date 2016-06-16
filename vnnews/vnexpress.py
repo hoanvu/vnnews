@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import requests
 import pandas as pd
 
@@ -15,8 +17,12 @@ def get_soup(url):
     return soup
 
 
-# This method return a list containing all news titles and URLs for one page
 def get_links_in_url(url):
+    """
+    Returns a list containing all news titles and URLs for one page
+    :param url: URL to extract news titles and URLs
+    :return: a pandas DataFrame containing 2 columns: title & url
+    """
     soup = get_soup(url)
     block_mid_new = soup.find('div', {'class': 'block_mid_new'})
     if block_mid_new.find_all('div', {'class': 'title_news'}):
@@ -30,8 +36,13 @@ def get_links_in_url(url):
     return pd.DataFrame(links_in_url, columns=['title', 'url'])
 
 
-# This method visits each news URL and return its text content
 def get_article_content(url):
+    """
+    Visits each news URL and return its text content
+
+    :param url: URL to extract the content
+    :return: article content
+    """
     soup = get_soup(url)
 
     # If page is an interactive page
@@ -68,9 +79,17 @@ def get_article_content(url):
             return ' '
 
 
-# Get URL for pages in a single category.
-# No of pages returned will be depended on number of news that user wants to get
 def get_page_urls(base_url, quantity=25):
+    """
+    VNExpress display 25 news article per page. This method returns number of pages
+    and their URL based on the quantity of articles that user wants
+    For example:
+        - if user wants 30 articles, first 2 page URLs will be returned
+        - if user wants 52 articles, first 3 page URLs will be returned
+    :param base_url: base URL for the category
+    :param quantity: number of articles user wants to get
+    :return: list of URLs based on `quantity`
+    """
     news_per_page = 25
     if quantity % news_per_page == 0:
         no_of_pages = quantity / news_per_page
@@ -83,9 +102,15 @@ def get_page_urls(base_url, quantity=25):
     return url_list
 
 
-# Get news for Thoi Su category
-def thoisu(quantity=25):
-    page_urls = get_page_urls(const.VNEXPRESS_THOISU, quantity)
+def get_category_news(base_url, quantity, category):
+    """
+    Returns news for a category. Each category only need to call this method in order to get the news
+    :param base_url: base URL for the category
+    :param quantity: number of articles user wants to get
+    :param category: category number, defined in const.py
+    :return: a pandas DataFrame containing news: its title, URL, content and its category number
+    """
+    page_urls = get_page_urls(base_url, quantity)
     all_urls = pd.DataFrame(columns=['title', 'url'])
     for page in page_urls:
         all_urls = all_urls.append(get_links_in_url(page), ignore_index=True)
@@ -97,56 +122,81 @@ def thoisu(quantity=25):
         content.append(get_article_content(url))
 
     all_urls['content'] = content
-    all_urls['category'] = 'thoisu'
+    all_urls['category'] = category
     return all_urls
 
 
-# Get news for Thoi Su category and convert to csv
+def thoisu(quantity=25):
+    """
+    Get news for Thời Sự
+    :param quantity: number of news article for Thời Sự to return
+    :return: a pandas DataFrame containing news defined by `quantity`
+    """
+    return get_category_news(const.VNEXPRESS_THOISU, quantity, const.THOISU_CAT)
+
+
 def thoisu_csv(quantity=25):
+    """
+    Get news for Thời Sự, but save to a CSV file
+    :param quantity: number of news article for Thời Sự to return
+    :return:
+    """
     data = thoisu(quantity)
     data.to_csv('./thoisu_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
 
 
-# Get news for The Thao category
 def thethao(quantity=25):
-    page_urls = get_page_urls(const.VNEXPRESS_THETHAO, quantity)
-    all_urls = pd.DataFrame(columns=['title', 'url'])
-    for page in page_urls:
-        all_urls = all_urls.append(get_links_in_url(page), ignore_index=True)
-
-    all_urls = all_urls[:quantity]
-    content = []
-    for url in all_urls.url:
-        print 'Crawling URL ---- {}'.format(url)
-        content.append(get_article_content(url))
-
-    all_urls['content'] = content
-    all_urls['category'] = 'thethao'
-    return all_urls
+    """
+    Get news for Thể Thao
+    :param quantity: number of news article for Thời Sự to return
+    :return: a pandas DataFrame containing news defined by `quantity`
+    """
+    return get_category_news(const.VNEXPRESS_THETHAO, quantity, const.THETHAO_CAT)
 
 
 def thethao_csv(quantity=25):
+    """
+    Get news for Thể Thao, but save to a CSV file
+    :param quantity: number of news article for Thời Sự to return
+    :return:
+    """
     data = thethao(quantity)
     data.to_csv('./thethao_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
 
 
 def giaitri(quantity=25):
-    page_urls = get_page_urls(const.VNEXPRESS_GIAITRI, quantity)
-    all_urls = pd.DataFrame(columns=['title', 'url'])
-    for page in page_urls:
-        all_urls = all_urls.append(get_links_in_url(page), ignore_index=True)
-
-    all_urls = all_urls[:quantity]
-    content = []
-    for url in all_urls.url:
-        print 'Crawling URL ---- {}'.format(url)
-        content.append(get_article_content(url))
-
-    all_urls['content'] = content
-    all_urls['category'] = 'giaitri'
-    return all_urls
+    """
+    Get news for Giải Trí
+    :param quantity: number of news article for Thời Sự to return
+    :return: a pandas DataFrame containing news defined by `quantity`
+    """
+    return get_category_news(const.VNEXPRESS_GIAITRI, quantity, const.GIAITRI_CAT)
 
 
 def giaitri_csv(quantity=25):
+    """
+    Get news for Giải Trí, but save to a CSV file
+    :param quantity: number of news article for Thời Sự to return
+    :return:
+    """
     data = giaitri(quantity)
     data.to_csv('./giaitri_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
+
+
+def khoahoc(quantity=25):
+    """
+    Get news for Khoa Học
+    :param quantity: number of news article for Thời Sự to return
+    :return: a pandas DataFrame containing news defined by `quantity`
+    """
+    return get_category_news(const.VNEXPRESS_KHOAHOC, quantity, const.KHOAHOC_CAT)
+
+
+def khoahoc_csv(quantity=25):
+    """
+    Get news for Khoa Học, but save to a CSV file
+    :param quantity: number of news article for Thời Sự to return
+    :return:
+    """
+    data = khoahoc(quantity)
+    data.to_csv('./khoahoc_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
