@@ -22,9 +22,9 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 ##### vnnews.vnexpress.get_soup(url)
 
 | Meta | Explanation |
-| - | - |
+| -- | -- |
 | Usage | Returns the DOM for a particular URL |
-| *Parameters* | **url**: URL of the page to get DOM
+| *Parameters* | **url**: URL of the page to get DOM |
 | *Returns* | DOM representation for the input URL |
 
 ##### vnnews.vnexpress.get_links_in_url(url)
