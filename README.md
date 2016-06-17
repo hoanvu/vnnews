@@ -5,7 +5,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 
 | Release date | Version number | Comments |
 | -------------| -------------- | -------- |
-| 2016/06/17 | 1.0.0 | First release |
+| 2016 / 06 / 17 | 1.0.0 | First release |
 
 ## Usage
 
