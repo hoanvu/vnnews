@@ -8,6 +8,7 @@ To read more about the challenges that we need to tackle when implement code to 
 | Release date | Version number | Comments |
 | -------------| -------------- | -------- |
 | 2016 / 06 / 17 | 1.0.0 | First release |
+| 2016 / 06 / 17 | 1.0.1 | Update APIs for Tin Nóng & Tâm Sự news | 
 
 ## Usage
 
@@ -75,7 +76,7 @@ To read more about the challenges that we need to tackle when implement code to 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Thời Sự |
-| *Parameters* | **quantity**: number of news article for Thời Sự to get <br> **to_csv**: if True, save data to file in local directory named *thoisu_vnexpress.csv*, default is False|
+| *Parameters* | **quantity**: number of news article for Thời Sự to get, default is 25 <br> **to_csv**: if True, save data to file in local directory named *thoisu_vnexpress.csv*, default is False|
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### - vnnews.vnexpress.thethao(quantity=25, to_csv=False)
@@ -83,21 +84,37 @@ To read more about the challenges that we need to tackle when implement code to 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Thể Thao |
-| *Parameters* | **quantity**: number of news article for Thể Thao to get <br> **to_csv**: if True, save data to file in local directory named *thethao_vnexpress.csv*, default is False |
-| *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
+| *Parameters* | **quantity**: number of news article for Thể Thao to get, default is 25 <br> **to_csv**: if True, save data to file in local directory named *thethao_vnexpress.csv*, default is False |
+| *Returns* | a pandas DataFrame containing Thể Thao news defined by `quantity` |
 
 #### - vnnews.vnexpress.giaitri(quantity=25, to_csv=False)
 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Giải Trí |
-| *Parameters* | **quantity**: number of news article for Giải Trí to get <br> **to_csv**: if True, save data to file in local directory named *giaitri_vnexpress.csv*, default is False |
-| *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
+| *Parameters* | **quantity**: number of news article for Giải Trí to get, default is 25 <br> **to_csv**: if True, save data to file in local directory named *giaitri_vnexpress.csv*, default is False |
+| *Returns* | a pandas DataFrame containing Giải Trí news defined by `quantity` |
 
 #### - vnnews.vnexpress.khoahoc(quantity=25, to_csv=False)
 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Khoa Học |
-| *Parameters* | **quantity**: number of news article for Khoa Học to get <br> **to_csv**: if True, save data to file in local directory named *khoahoc_vnexpress.csv*, default is False|
-| *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
+| *Parameters* | **quantity**: number of news article for Khoa Học to get, default is 25 <br> **to_csv**: if True, save data to file in local directory named *khoahoc_vnexpress.csv*, default is False|
+| *Returns* | a pandas DataFrame containing Khoa Học news defined by `quantity` |
+
+#### - vnnews.vnexpress.tamsu(quantity=25, to_csv=False)
+
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Tâm Sự |
+| *Parameters* | **quantity**: number of news article for Tâm Sự to get, default is 25  <br> **to_csv**: if True, save data to file in local directory named *tamsu_vnexpress.csv*, default is False|
+| *Returns* | a pandas DataFrame containing Tâm Sự news defined by `quantity` |
+
+#### - vnnews.vnexpress.tinnong(quantity=28, to_csv=False)
+
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get all Tin Nóng news |
+| *Parameters* | **quantity**: number of news article for Tin Nóng to get, default is 28 <br> **to_csv**: if True, save data to file in local directory named *tinnong_vnexpress.csv*, default is False|
+| *Returns* | a pandas DataFrame containing Tin Nóng news defined by `quantity` |
