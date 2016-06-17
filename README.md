@@ -1,6 +1,8 @@
 # A Python package for crawling news
 The package is currently maintaining APIs for crawling VNExpress. Documentation will be updated here until I find a better place.
 
+To read more about the challenges that we need to tackle when implement code to crawl a website, [please visit my blog](http://hoanvu.github.io/2016/06/introducing-vnnews-package).
+
 ## Version logs
 
 | Release date | Version number | Comments |
