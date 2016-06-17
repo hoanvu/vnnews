@@ -10,11 +10,14 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
     ```python
     from vnnews import vnexpress
     
-    # Get first 20 'Thời Sự' article from VNExpress
+    # Get first 20 'Thời Sự' article from VNExpress, print them out
     vnexpress.thoisu(20) 
     
-    # Get first 1000 'Thể Thao' article from VNExpress
+    # Get first 1000 'Thể Thao' article from VNExpress, print them out
     vnexpress.thethao(1000) 
+    
+    # Get first 1000 'Thể Thao' article from VNExpress, and save to CSV thethao_vnexpress.csv in local directory
+    vnexpress.thethao(1000, to_csv=True)     
     ```
     
 ## Documentation
@@ -64,7 +67,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Thời Sự |
-| *Parameters* | **quantity**: number of news article for Thời Sự to get <br> **to_csv**: if True, save data to file in local directory named thoisu_vnexpress.csv, default is False|
+| *Parameters* | **quantity**: number of news article for Thời Sự to get <br> **to_csv**: if True, save data to file in local directory named *thoisu_vnexpress.csv*, default is False|
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### - vnnews.vnexpress.thethao(quantity=25, to_csv=False)
@@ -72,7 +75,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Thể Thao |
-| *Parameters* | **quantity**: number of news article for Thể Thao to get <br> **to_csv**: if True, save data to file in local directory named thethao_vnexpress.csv, default is False |
+| *Parameters* | **quantity**: number of news article for Thể Thao to get <br> **to_csv**: if True, save data to file in local directory named *thethao_vnexpress.csv*, default is False |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### - vnnews.vnexpress.giaitri(quantity=25, to_csv=False)
@@ -80,7 +83,7 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Giải Trí |
-| *Parameters* | **quantity**: number of news article for Giải Trí to get <br> **to_csv**: if True, save data to file in local directory named giaitri_vnexpress.csv, default is False |
+| *Parameters* | **quantity**: number of news article for Giải Trí to get <br> **to_csv**: if True, save data to file in local directory named *giaitri_vnexpress.csv*, default is False |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
 #### - vnnews.vnexpress.khoahoc(quantity=25, to_csv=False)
@@ -88,5 +91,5 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Khoa Học |
-| *Parameters* | **quantity**: number of news article for Khoa Học to get <br> **to_csv**: if True, save data to file in local directory named khoahoc_vnexpress.csv, default is False|
+| *Parameters* | **quantity**: number of news article for Khoa Học to get <br> **to_csv**: if True, save data to file in local directory named *khoahoc_vnexpress.csv*, default is False|
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
