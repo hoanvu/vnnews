@@ -130,7 +130,7 @@ def thoisu(quantity=25, to_csv=False):
     """
     Get news for Thời Sự, have options to print or save to CSV file
     :param quantity: number of news article for Thời Sự to return
-    :param to_csv: if True, save data to file in local directory named thoisu_vnexpress.csv
+    :param to_csv: if True, save data to file in local directory named thoisu_vnexpress.csv, default is False
     :return: a pandas DataFrame containing news defined by `quantity`
     """
     if to_csv:

@@ -59,34 +59,34 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **base_url**: base URL for the category <br> **quantity**: number of articles user wants to get <br> **category**: category number, defined in const.py |
 | *Returns* | a pandas DataFrame containing news: its title, URL, content and its category number |
 
-#### - vnnews.vnexpress.thoisu(quantity=25)
+#### - vnnews.vnexpress.thoisu(quantity=25, to_csv=False)
 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Thời Sự |
-| *Parameters* | **quantity**: number of news article for Thời Sự to get |
+| *Parameters* | **quantity**: number of news article for Thời Sự to get <br> **to_csv**: if True, save data to file in local directory named thoisu_vnexpress.csv, default is False|
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### - vnnews.vnexpress.thethao(quantity=25)
+#### - vnnews.vnexpress.thethao(quantity=25, to_csv=False)
 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Thể Thao |
-| *Parameters* | **quantity**: number of news article for Thể Thao to get |
+| *Parameters* | **quantity**: number of news article for Thể Thao to get <br> **to_csv**: if True, save data to file in local directory named thethao_vnexpress.csv, default is False |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### - vnnews.vnexpress.giaitri(quantity=25)
+#### - vnnews.vnexpress.giaitri(quantity=25, to_csv=False)
 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Giải Trí |
-| *Parameters* | **quantity**: number of news article for Giải Trí to get |
+| *Parameters* | **quantity**: number of news article for Giải Trí to get <br> **to_csv**: if True, save data to file in local directory named giaitri_vnexpress.csv, default is False |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### - vnnews.vnexpress.khoahoc(quantity=25)
+#### - vnnews.vnexpress.khoahoc(quantity=25, to_csv=False)
 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get news for Khoa Học |
-| *Parameters* | **quantity**: number of news article for Khoa Học to get |
+| *Parameters* | **quantity**: number of news article for Khoa Học to get <br> **to_csv**: if True, save data to file in local directory named khoahoc_vnexpress.csv, default is False|
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
