@@ -126,77 +126,62 @@ def get_category_news(base_url, quantity, category):
     return all_urls
 
 
-def thoisu(quantity=25):
+def thoisu(quantity=25, to_csv=False):
     """
-    Get news for Thời Sự
+    Get news for Thời Sự, have options to print or save to CSV file
     :param quantity: number of news article for Thời Sự to return
+    :param to_csv: if True, save data to file in local directory named thoisu_vnexpress.csv
     :return: a pandas DataFrame containing news defined by `quantity`
     """
-    return get_category_news(const.VNEXPRESS_THOISU, quantity, const.THOISU_CAT)
+    if to_csv:
+        data = thoisu(quantity)
+        data.to_csv('./thoisu_vnexpress.csv',
+                    index=False,
+                    encoding='utf-8',
+                    escapechar='\\')
+    else:
+        return get_category_news(const.VNEXPRESS_THOISU, quantity, const.THOISU_CAT)
 
 
-def thoisu_csv(quantity=25):
+def thethao(quantity=25, to_csv=False):
     """
-    Get news for Thời Sự, but save to a CSV file
+    Get news for Thể Thao, have options to print or save to CSV file
     :param quantity: number of news article for Thời Sự to return
-    :return:
-    """
-    data = thoisu(quantity)
-    data.to_csv('./thoisu_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
-
-
-def thethao(quantity=25):
-    """
-    Get news for Thể Thao
-    :param quantity: number of news article for Thời Sự to return
+    :param to_csv: if True, save data to file in local directory named thethao_vnexpress.csv
     :return: a pandas DataFrame containing news defined by `quantity`
     """
-    return get_category_news(const.VNEXPRESS_THETHAO, quantity, const.THETHAO_CAT)
+    if to_csv:
+        data = thethao(quantity)
+        data.to_csv('./thethao_vnexpress.csv', index=False,
+                    encoding='utf-8', escapechar='\\')
+    else:
+        return get_category_news(const.VNEXPRESS_THETHAO, quantity, const.THETHAO_CAT)
 
 
-def thethao_csv(quantity=25):
+def giaitri(quantity=25, to_csv=False):
     """
-    Get news for Thể Thao, but save to a CSV file
+    Get news for Giải Trí, have options to print or save to CSV file
     :param quantity: number of news article for Thời Sự to return
-    :return:
-    """
-    data = thethao(quantity)
-    data.to_csv('./thethao_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
-
-
-def giaitri(quantity=25):
-    """
-    Get news for Giải Trí
-    :param quantity: number of news article for Thời Sự to return
+    :param to_csv: if True, save data to file in local directory named giaitri_vnexpress.csv
     :return: a pandas DataFrame containing news defined by `quantity`
     """
-    return get_category_news(const.VNEXPRESS_GIAITRI, quantity, const.GIAITRI_CAT)
+    if to_csv:
+        data = giaitri(quantity)
+        data.to_csv('./giaitri_vnexpress.csv', index=False,
+                    encoding='utf-8', escapechar='\\')
+    else:
+        return get_category_news(const.VNEXPRESS_GIAITRI, quantity, const.GIAITRI_CAT)
 
 
-def giaitri_csv(quantity=25):
+def khoahoc(quantity=25, to_csv=False):
     """
-    Get news for Giải Trí, but save to a CSV file
+    Get news for Khoa Học, have options to print or save to CSV file
     :param quantity: number of news article for Thời Sự to return
-    :return:
-    """
-    data = giaitri(quantity)
-    data.to_csv('./giaitri_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
-
-
-def khoahoc(quantity=25):
-    """
-    Get news for Khoa Học
-    :param quantity: number of news article for Thời Sự to return
+    :param to_csv: if True, save data to file in local directory named khoahoc_vnexpress.csv
     :return: a pandas DataFrame containing news defined by `quantity`
     """
-    return get_category_news(const.VNEXPRESS_KHOAHOC, quantity, const.KHOAHOC_CAT)
-
-
-def khoahoc_csv(quantity=25):
-    """
-    Get news for Khoa Học, but save to a CSV file
-    :param quantity: number of news article for Thời Sự to return
-    :return:
-    """
-    data = khoahoc(quantity)
-    data.to_csv('./khoahoc_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
+    if to_csv:
+        data = khoahoc(quantity)
+        data.to_csv('./khoahoc_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
+    else:
+        return get_category_news(const.VNEXPRESS_KHOAHOC, quantity, const.KHOAHOC_CAT)

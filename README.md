@@ -67,14 +67,6 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Thời Sự to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### - vnnews.vnexpress.thoisu_csv(quantity=25)
-
-| Meta | Explanation |
-| :---- | :----------- |
-| *Usage* | Get news for Thời Sự and save to CSV file |
-| *Parameters* | **quantity**: number of news article for Thời Sự to get |
-| *Returns* | None |
-
 #### - vnnews.vnexpress.thethao(quantity=25)
 
 | Meta | Explanation |
@@ -82,14 +74,6 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Usage* | Get news for Thể Thao |
 | *Parameters* | **quantity**: number of news article for Thể Thao to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
-
-#### - vnnews.vnexpress.thethao_csv(quantity=25)
-
-| Meta | Explanation |
-| :---- | :----------- |
-| *Usage* | Get news for Thể Thao and save to CSV file |
-| *Parameters* | **quantity**: number of news article for Thể Thao to get |
-| *Returns* | None |
 
 #### - vnnews.vnexpress.giaitri(quantity=25)
 
@@ -99,14 +83,6 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Parameters* | **quantity**: number of news article for Giải Trí to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
 
-#### - vnnews.vnexpress.giaitri_csv(quantity=25)
-
-| Meta | Explanation |
-| :---- | :----------- |
-| *Usage* | Get news for Giải Trí and save to CSV file |
-| *Parameters* | **quantity**: number of news article for Giải Trí to get |
-| *Returns* | None |
-
 #### - vnnews.vnexpress.khoahoc(quantity=25)
 
 | Meta | Explanation |
@@ -114,11 +90,3 @@ The package is currently maintaining APIs for crawling VNExpress. Documentation 
 | *Usage* | Get news for Khoa Học |
 | *Parameters* | **quantity**: number of news article for Khoa Học to get |
 | *Returns* | a pandas DataFrame containing Thời Sự news defined by `quantity` |
-
-#### - vnnews.vnexpress.khoahoc_csv(quantity=25)
-
-| Meta | Explanation |
-| :---- | :----------- |
-| *Usage* | Get news for Khoa Học and save to CSV file |
-| *Parameters* | **quantity**: number of news article for Khoa Học to get |
-| *Returns* | None |
