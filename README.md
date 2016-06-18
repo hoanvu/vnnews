@@ -116,5 +116,5 @@ To read more about the challenges that we need to tackle when implement code to 
 | Meta | Explanation |
 | :---- | :----------- |
 | *Usage* | Get all Tin Nóng news |
-| *Parameters* | **quantity**: number of news article for Tin Nóng to get, default is 28 <br> **to_csv**: if True, save data to file in local directory named *tinnong_vnexpress.csv*, default is False|
+| *Parameters* | **quantity**: number of news article for Tin Nóng to get, default is 25 <br> **to_csv**: if True, save data to file in local directory named *tinnong_vnexpress.csv*, default is False|
 | *Returns* | a pandas DataFrame containing Tin Nóng news defined by `quantity` |
