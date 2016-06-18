@@ -7,8 +7,8 @@ To read more about the challenges that we need to tackle when implement code to 
 
 | Release date | Version number | Comments |
 | -------------| -------------- | -------- |
-| 2016 / 06 / 17 | 1.0.0 | First release |
 | 2016 / 06 / 17 | 1.0.1 | Update APIs for Tin Nóng & Tâm Sự news | 
+| 2016 / 06 / 17 | 1.0.0 | First release |
 
 ## Usage
 
