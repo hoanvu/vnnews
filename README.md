@@ -11,6 +11,18 @@ To read more about the challenges that we need to tackle when implement code to 
 | 2016 / 06 / 17 | 1.0.1 | Update APIs for Tin Nóng & Tâm Sự news | 
 | 2016 / 06 / 17 | 1.0.0 | First release |
 
+## Supported Sites & Categories
+
+- VNExpress
+    - Thời Sự
+    - Thể Thao
+    - Giải Trí
+    - Khoa Học
+    - Tâm Sự
+    - Số Hóa
+    - Xe
+    - Tin Nóng
+
 ## Usage
 
 1. Download or clone the repository
@@ -31,18 +43,6 @@ To read more about the challenges that we need to tackle when implement code to 
     ```
     
 ## Documentation
-
-#### Supported Sites & Categories
-
-- VNExpress
-    - Thời Sự
-    - Thể Thao
-    - Giải Trí
-    - Khoa Học
-    - Tâm Sự
-    - Số Hóa
-    - Xe
-    - Tin Nóng
 
 #### - vnnews.vnexpress.get_soup(url)
 
