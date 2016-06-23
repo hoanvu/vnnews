@@ -111,7 +111,7 @@ To read more about the challenges that we need to tackle when implement code to 
 | *Parameters* | **quantity**: number of news article for Tâm Sự to get, default is 25  <br> **to_csv**: if True, save data to file in local directory named *tamsu_vnexpress.csv*, default is False|
 | *Returns* | a pandas DataFrame containing Tâm Sự news defined by `quantity` |
 
-#### - vnnews.vnexpress.tinnong(quantity=28, to_csv=False)
+#### - vnnews.vnexpress.tinnong(quantity=25, to_csv=False)
 
 | Meta | Explanation |
 | :---- | :----------- |
