@@ -52,8 +52,11 @@ def get_article_content(url):
 
     # If page is an interactive page
     if '/interactive/' in url:
-        # return all_urls[all_urls.url == url]['title'].tolist()[0]
         return ' '
+
+    # # If page is a Q&A page
+    # elif '/tu-van/' in url:
+    #     return ' '
 
     # If page is a video page
     elif 'video.vnexpress.net' in url:
@@ -197,6 +200,34 @@ def tamsu(quantity=25, to_csv=False):
     data = get_category_news(const.VNEXPRESS_TAMSU, quantity, const.TAMSU_CAT)
     if to_csv:
         data.to_csv('./tamsu_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
+    else:
+        return data
+
+
+def sohoa(quantity=25, to_csv=False):
+    """
+    Get news for Số Hóa, have options to print or save to CSV file
+    :param quantity: number of news article for Số Hóa to return
+    :param to_csv: if True, save data to file in local directory named sohoa_vnexpress.csv
+    :return: if to_csv=False, returns a pandas DataFrame containing news defined by `quantity`, else returns None
+    """
+    data = get_category_news(const.VNEXPRESS_SOHOA, quantity, const.SOHOA_CAT)
+    if to_csv:
+        data.to_csv('./sohoa_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
+    else:
+        return data
+
+
+def xe(quantity=25, to_csv=False):
+    """
+    Get news for Xe, have options to print or save to CSV file
+    :param quantity: number of news article for Xe to return
+    :param to_csv: if True, save data to file in local directory named xe_vnexpress.csv
+    :return: if to_csv=False, returns a pandas DataFrame containing news defined by `quantity`, else returns None
+    """
+    data = get_category_news(const.VNEXPRESS_XE, quantity, const.XE_CAT)
+    if to_csv:
+        data.to_csv('./xe_vnexpress.csv', index=False, encoding='utf-8', escapechar='\\')
     else:
         return data
 

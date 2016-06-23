@@ -7,6 +7,7 @@ To read more about the challenges that we need to tackle when implement code to 
 
 | Release date | Version number | Comments |
 | -------------| -------------- | -------- |
+| 2016 / 06 / 23 | 1.0.2 | Update APIs for Số Hóa & Xe news and update documentation | 
 | 2016 / 06 / 17 | 1.0.1 | Update APIs for Tin Nóng & Tâm Sự news | 
 | 2016 / 06 / 17 | 1.0.0 | First release |
 
@@ -30,6 +31,18 @@ To read more about the challenges that we need to tackle when implement code to 
     ```
     
 ## Documentation
+
+#### Supported Sites & Categories
+
+- VNExpress
+    - Thời Sự
+    - Thể Thao
+    - Giải Trí
+    - Khoa Học
+    - Tâm Sự
+    - Số Hóa
+    - Xe
+    - Tin Nóng
 
 #### - vnnews.vnexpress.get_soup(url)
 
@@ -110,6 +123,22 @@ To read more about the challenges that we need to tackle when implement code to 
 | *Usage* | Get news for Tâm Sự |
 | *Parameters* | **quantity**: number of news article for Tâm Sự to get, default is 25  <br> **to_csv**: if True, save data to file in local directory named *tamsu_vnexpress.csv*, default is False|
 | *Returns* | a pandas DataFrame containing Tâm Sự news defined by `quantity` |
+
+#### - vnnews.vnexpress.sohoa(quantity=25, to_csv=False)
+
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Số Hóa |
+| *Parameters* | **quantity**: number of news article for Số Hóa to get, default is 25  <br> **to_csv**: if True, save data to file in local directory named *sohoa_vnexpress.csv*, default is False|
+| *Returns* | a pandas DataFrame containing Tâm Sự news defined by `quantity` |
+
+#### - vnnews.vnexpress.xe(quantity=25, to_csv=False)
+
+| Meta | Explanation |
+| :---- | :----------- |
+| *Usage* | Get news for Xe |
+| *Parameters* | **quantity**: number of news article for Xe to get, default is 25  <br> **to_csv**: if True, save data to file in local directory named *xe_vnexpress.csv*, default is False|
+| *Returns* | a pandas DataFrame containing Xe news defined by `quantity` |
 
 #### - vnnews.vnexpress.tinnong(quantity=25, to_csv=False)
 

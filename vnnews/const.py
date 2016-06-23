@@ -4,6 +4,8 @@ VNEXPRESS_GIAITRI = 'http://giaitri.vnexpress.net/'
 VNEXPRESS_KHOAHOC = 'http://vnexpress.net/tin-tuc/khoa-hoc/'
 VNEXPRESS_DULICH = 'http://dulich.vnexpress.net/'
 VNEXPRESS_TAMSU = 'http://vnexpress.net/tin-tuc/tam-su/'
+VNEXPRESS_SOHOA = 'http://sohoa.vnexpress.net/'
+VNEXPRESS_XE = 'http://vnexpress.net/tin-tuc/oto-xe-may/'
 VNEXPRESS_24H = 'http://vnexpress.net/24h-qua/'
 VNEXPRESS_TINNONG = 'http://vnexpress.net/tin-nong/'
 
@@ -30,3 +32,5 @@ GIAITRI_CAT = 3
 KHOAHOC_CAT = 4
 TAMSU_CAT = 5
 TINNONG_CAT = 6
+SOHOA_CAT = 7
+XE_CAT = 8
